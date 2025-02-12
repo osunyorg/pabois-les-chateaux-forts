@@ -2,6 +2,11 @@
 
 baseURL: https://les-chateaux-forts.pabois.osuny.site
 
+## OSUNY
+osuny:
+  website:
+    id: 54a5b5f8-62d0-4046-95df-b1313cca72d6
+
 ## LANGUAGE
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
