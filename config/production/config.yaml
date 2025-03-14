@@ -2,6 +2,11 @@
 
 baseURL: https://les-chateaux-forts.pabois.osuny.site
 
+## OSUNY
+osuny:
+  website:
+    id: 54a5b5f8-62d0-4046-95df-b1313cca72d6
+
 ## LANGUAGE
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
@@ -9,15 +14,13 @@ defaultContentLanguageInSubdir: false
 ## CACHE
 deployment:
   matchers:
-    - pattern: "^.+\\.(woff2|woff|svg|ttf|eot|js|css)$"
+    - pattern: "^.+\\.(woff2|woff|svg|ttf|otf|eot|js|css)$"
       cacheControl: "max-age=31536000, no-transform, public"
       gzip: true
     - pattern: "^.+\\.(png|jpg|jpeg|gif|webp)$"
       cacheControl: "max-age=31536000, no-transform, public"
       gzip: false
-
-## DEUXFLEURS
-deployment:
+  ## DEUXFLEURS
   targets:
     - name: "production"
-      URL: "s3://les-chateaux-forts.pabois.osuny.site?endpoint=garage.deuxfleurs.fr&s3ForcePathStyle=true&region=garage"
+      URL: "s3://les-chateaux-forts.pabois.osuny.site?endpoint=garage.deuxfleurs.fr&s3ForcePathStyle=true&region=garage&awssdk=v1"
